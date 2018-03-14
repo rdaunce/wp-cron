@@ -117,7 +117,19 @@ wp-cron () {
 }
 
 usage(){
-        echo "help"
+        echo "Usage: wp-cron.sh [options...]"
+        echo "Options:"
+        echo " -r, --runall           Run all pending WordPress cron tasks on all WordPress installations"
+        echo "                        that have the WordPress Cron system disabled"
+        echo " -i, --interactive      Run in interactive mode with menu"
+        echo " -h, --help             Display help contents"
+        echo ""
+        echo "The program will scan locate all WordPress installations recursively within the current directory."
+        echo ""
+        echo "Interactive Mode displays an interactive menu to list all discovered WordPress installations, enable/disable"
+        echo "the WordPress Cron system for all installations, or toggle the WordPress Cron system on an individual"
+        echo "installation.  It also provides an option to run all pending WordPress Cron jobs on all sites that have been"
+        echo "setup for manual proccessing."
         echo ""
 }
 
