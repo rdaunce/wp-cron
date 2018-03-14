@@ -10,7 +10,7 @@ Download the file and apply execute permissions
 
 ```bash
  $ curl -O -L https://github.com/rdaunce/wp-cron/raw/master/wp-cron.sh
- $ chmod 755 wp-cron.sh
+ $ chmod +x wp-cron.sh
 ```
 
 Configure the WordPress installations for manual Cron processing by running the script in interactive mode.
