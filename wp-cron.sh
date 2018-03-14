@@ -88,9 +88,10 @@ setall(){
                 if [ $? -ne 0 ]
                 then
                         echo "Failed to set DISABLE_WP_CRON to $1 for ${INSTPATH[$index]}"
+                else
+                        configcheck=`wp config get DISABLE_WP_CRON --path=${INSTPATH[$index]}`
+                        wp_cron[$index]=[$configcheck]                        
                 fi
-
-                wp_cron[$i]=[$configcheck]
         done
 }
 
