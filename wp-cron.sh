@@ -27,7 +27,7 @@ init () {
                 INSTPATH[$i]=$line
 
                 printf "."
-        done <<< "$(find | grep wp-config.php | sed -r 's:/wp-config.php::' | sort )"
+        done <<< "$(find | grep wp-config.php$ | sed -r 's:/wp-config.php::' | sort )"
 
         echo ""
         echo Found $i WordPress installations
